@@ -1,0 +1,3 @@
+@model IEnumerable<PhoneBookApp.Models.Contact>
+<h2>Telefon Rehberi</h2><p><a asp-action="Create" class="btn btn-primary">Yeni Kayıt Ekle</a>
+</p><table class="table table-striped"><thead><tr><th>Ad Soyad</th><th>Telefon</th><th>Email</th><th></th></tr></thead><tbody>@foreach (var item in Model) {<tr><td>@item.Name</td><td>@item.PhoneNumber</td><td>@item.Email</td><td><a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Düzenle</a><a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detay</a><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a></td></tr>}</tbody></table>

@@ -1,0 +1,2 @@
+﻿    using System.ComponentModel.DataAnnotations;
+    namespace PhoneBookApp.Models { public class Contact { public int Id { get; set; } [Required(ErrorMessage = "Ad soyad zorunludur")][StringLength(100)] public string Name { get; set; } = string.Empty; [Phone(ErrorMessage = "Geçerli bir telefon numarası giriniz")][Required] public string PhoneNumber { get; set; } = string.Empty; [EmailAddress(ErrorMessage = "Geçerli bir e-posta giriniz")] public string? Email { get; set; } } }
